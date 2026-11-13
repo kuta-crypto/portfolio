@@ -1555,3 +1555,8 @@ a:hover .arrow-icon {
 .project-gallery figure { margin: 0; min-width: 0; }
 .project-gallery img { display: block; width: 100%; max-height: 640px; object-fit: contain; }
 .project-gallery figcaption { padding-block: 12px; color: var(--text-secondary); }
+
+.profile-avatar { display: grid; place-items: center; width: 64px; height: 64px; margin-block: 24px; color: var(--accent); border: 1px solid currentColor; border-radius: 16px; }
+.profile-avatar svg { width: 36px; height: 36px; }
+.project-gallery img { height: auto; border-radius: 12px; }
+.project-gallery a { display: block; }

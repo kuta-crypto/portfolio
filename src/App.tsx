@@ -135,7 +135,7 @@ function Hero() {
               Spataro<span className="hero__period">.</span>
             </span>
           </h1>
-          {media.portrait && <img className="profile-photo" src={`${import.meta.env.BASE_URL}${media.portrait}`} alt="Jeremias Spataro" width="120" height="120" />}<p className="hero__intro">{content.intro}</p>
+          <div className="profile-avatar" role="img" aria-label="Avatar de Jeremias Spataro"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="16" cy="11" r="5" /><path d="M6 28v-3a10 10 0 0 1 20 0v3Z" /></svg></div><p className="hero__intro">{content.intro}</p>
           <p className="hero__location">
             Estudiante de programación · Tandil, Argentina
           </p>
@@ -296,7 +296,7 @@ function Projects() {
               </div>
             </div>
           </div>
-          {media.screenshots.length ? <div className="project-gallery">{media.screenshots.map((photo) => <figure key={photo.src}><img src={`${import.meta.env.BASE_URL}${photo.src}`} alt={photo.alt} loading="lazy" /><figcaption>{photo.alt}</figcaption></figure>)}</div> : <MapConcept />}
+          {media.screenshots.length ? <div className="project-gallery">{media.screenshots.map((photo) => <figure key={photo.src}><a href={`${import.meta.env.BASE_URL}${photo.src}`} target="_blank" rel="noopener noreferrer" aria-label={`Ampliar captura: ${photo.alt}`}><img src={`${import.meta.env.BASE_URL}${photo.src}`} alt={photo.alt} width="720" height="1600" loading="lazy" /></a><figcaption>{photo.alt}</figcaption></figure>)}</div> : <MapConcept />}
           <div className="featured-project__bottom">
             <span>Por {project.authors}</span>
             <a href="#caso-infomicro">
@@ -611,4 +611,5 @@ export default function App() {
     </>
   )
 }
+
 
